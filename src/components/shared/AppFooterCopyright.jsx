@@ -19,7 +19,7 @@ function AppFooterCopyright() {
           >
             Stoman{' '}
           </a>
-          for the open-source{' '}
+          for the open-source
           <a
             href="https://github.com/realstoman/react-tailwindcss-portfolio"
             target="__blank"
