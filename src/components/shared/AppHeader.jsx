@@ -3,8 +3,8 @@ import { FiMenu, FiMoon, FiSun, FiX } from 'react-icons/fi'
 import { Link } from 'react-router-dom'
 import useThemeSwitcher from '../../hooks/useThemeSwitcher'
 import ContactMeModal from '../ContactMeModal'
-import logoLight from '../../images/logo-light.svg'
-import logoDark from '../../images/logo-dark.svg'
+// import logoLight from '../../images/logo-light.svg'
+import logo from '../../images/eden-logo.svg'
 import { motion } from 'framer-motion'
 import Button from '../reusable/Button'
 
@@ -46,12 +46,12 @@ const AppHeader = () => {
         {/* Header menu links and small screen hamburger menu */}
         <div className="flex justify-between items-center px-4 sm:px-0">
           <div>
-            <Link to="/">
-              {activeTheme === 'dark' ? (
-                <img src={logoDark} className="w-36" alt="Dark Logo" />
-              ) : (
-                <img src={logoLight} className="w-36" alt="Dark Logo" />
-              )}
+            <Link
+              to="/"
+              className="flex items-center text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light font-general-medium"
+            >
+              <img src={logo} className="w-6 mr-2" alt="Eden Logo" />
+              <span>Eden Pearson</span>
             </Link>
           </div>
 
@@ -120,7 +120,7 @@ const AppHeader = () => {
           >
             Contact
           </Link> */}
-          <div className="border-t-2 pt-3 sm:pt-0 sm:border-t-0 border-primary-light dark:border-secondary-dark">
+          {/* <div className="border-t-2 pt-3 sm:pt-0 sm:border-t-0 border-primary-light dark:border-secondary-dark">
             <span
               onClick={showContactMeModal}
               className="font-general-medium sm:hidden block text-left text-md bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-sm px-4 py-2 mt-2 duration-300 w-24"
@@ -128,7 +128,7 @@ const AppHeader = () => {
             >
               <Button title="Contact Me" />
             </span>
-          </div>
+          </div> */}
         </div>
 
         {/* Header links large screen */}
